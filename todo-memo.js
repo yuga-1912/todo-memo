@@ -40,5 +40,5 @@ addButton.addEventListener(
 )
 
 function saveToDos() {
-  localStorage.setItem('contentDivision', JSON.stringify(contentDivision));
+  localStorage.setItem('savedDiv', div.outerHTML);
 }
