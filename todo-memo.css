@@ -1,0 +1,39 @@
+body {
+  width: 550px;
+  margin: auto;
+}
+
+.input-set {
+  padding: 0px 0px 20px 0px;
+}
+ 
+input {
+  width: 480px;
+  height: 23px;
+}
+
+.add-button {
+  background-color: rgb(202, 226, 240);
+  border: none;
+  padding: 5px 10px;
+}
+
+.content-set {
+  padding: 10px 0px;
+  display: flex;
+  align-items: center;
+}
+
+.sentence {
+  margin: 0;
+  padding: 2px;
+  
+}
+
+.del-button {
+  font-size: 30px;
+  background-color: white;
+  border: none;
+  display: flex;
+  margin-left: auto;
+}
