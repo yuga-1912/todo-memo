@@ -22,7 +22,7 @@ addButton.addEventListener(
 
     const deleteButton = document.createElement('button');
     deleteButton.innerText = '×';
-    contentDivision.appendChild(deleteButton);
+    contentDivision.appendChild(deleteButton),
 
     deleteButton.addEventListener(
       `click`,
@@ -35,10 +35,16 @@ addButton.addEventListener(
     )
     contentDivision.classList.add('content-set');
     paragraph.classList.add('sentence');
-    deleteButton.classList.add('del-button');
-  }
+    deleteButton.classList.add('del-button')
+  },
+  localStorage.setItem('savedText', todoContentInput.value)
 )
 
-function saveToDos() {
-  localStorage.setItem('savedDiv', div.outerHTML);
-}
+window.addEventListener(
+  'DOMContentLoaded',
+  () => {
+  const saved = localStorage.getItem('savedText');
+  if (saved !== null) {
+    todoContentInput.value = saved;
+  }
+});
