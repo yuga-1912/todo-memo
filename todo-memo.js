@@ -24,7 +24,7 @@ const emptyMessage = document.getElementById('empty-message');
 
 // データを保存する関数
 function saveTasks() {
-  localStorage.getItem(
+  localStorage.setItem(
     "myTasks",
     JSON.stringify(tasks)
   )
