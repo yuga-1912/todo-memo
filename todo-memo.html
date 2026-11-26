@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="todo-memo.css">
+  <title>ToDo Memo</title>
+</head>
+<body>
+  <div class="container">
+    <h1>ToDo Memo</h1>
+
+    <div class="stats-area">
+      <div class="stats-card">
+        <p>すべて</p>
+        <h2 id="total-count">0</h2>
+      </div>
+
+      <div class="stats-card">
+        <p>未完了</p>
+        <h2 id="active-count">0</h2>
+      </div>
+
+      <div class="stats-card">
+        <p>完了</p>
+        <h2 id="completed-count">0</h2>
+      </div>
+    </div>
+
+    <div class="task-form">
+      <h2>新しいタスクを追加</h2>
+
+      <form id="task-form">
+        <input type="text" id="task-title" placeholder="タスクを入力してください" maxlength="100" required>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="task-date">期限</label>
+            <input type="date" id="task-date">
+          </div>
+
+          <div class="form-group">
+            <label for="priority">優先度</label>
+            <select id="task-priority">
+              <option value="low">低</option>
+              <option value="medium">中</option>
+              <option value="high">高</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="add-button">
+          + タスクを追加
+        </button>
+      </form>
+    </div>
+
+    <div class="tasks">
+      <div class="task-heading">
+        <h2>タスク一覧</h2>
+        <span id="list-count">0件</span>
+      </div>
+
+      <div class="filters">
+        <button class="filter acticve" data-filter="all">すべて</button>
+        <button class="filter" data-filter="active">未完了</button>
+        <button class="filter" data-filter="completed">完了</button>
+      </div>
+
+      <div id="task-list" class="task-list"></div>
+
+      <p id="empty-message" class="empty-message">
+        タスクはまだありません
+        新しいタスクを追加しましょう
+      </p>
+    </div>
+  </div>
+
+  <script src="todo-memo.js"></script>
+  
+  </body>
+</html>
